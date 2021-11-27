@@ -1,7 +1,5 @@
-.global-title{
-    font-family: 'Poppins', sans-serif;
-    color: #4F4F4F;
-    font-weight: 700;
+header{
+    padding: 20px 0 45px 0;
 }
 .btn-primary{
     font-size: 1em;
