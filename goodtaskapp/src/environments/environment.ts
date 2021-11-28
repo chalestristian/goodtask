@@ -4,6 +4,7 @@
 
 export const environment = {
   production: false
+  
 };
 
 /*
@@ -14,3 +15,4 @@ export const environment = {
  * on performance if an error is thrown.
  */
 // import 'zone.js/plugins/zone-error';  // Included with Angular CLI.
+export const API_PATH = "http://localhost:3000/api/"
