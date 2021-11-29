@@ -8,7 +8,7 @@ export default class taskController{
 
         const getTaskRequest = await taskUseCase.getRequest(request)
 
-        response.json({response: getTaskRequest.resp}).status(getTaskRequest.code)
+        response.json(getTaskRequest)
         return response
     }
 
@@ -44,7 +44,7 @@ export default class taskController{
 
         const getAllTasks = await taskUseCase.getAllTasks()
 
-        response.json({response: getAllTasks.resp}).status(getAllTasks.code)
+        response.json(getAllTasks).status(getAllTasks.code)
         return response
     }
 } 

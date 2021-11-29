@@ -3,8 +3,8 @@ import { ITasks } from "./ITasks";
 import { ITasksUpdate } from "./ITasksUpdate";
 
 export interface ITaskRepository{
-    findAllTasks: () => Promise<[ITasks[], number]>
-    findAllActiveTasks: () => Promise<[ITasks[], number]>
+    findAllTasks: () => Promise<ITasks[]>
+    findAllActiveTasks: () => Promise<ITasks[]>
     findById: (id: ITasks["id"]) => Promise<ITasks>
     findByName: (name: ITasks["name"]) => Promise<[ITasks[], number]>
     

@@ -3,11 +3,15 @@
         <h2>Tasks </h2>
     </div>
     <div>
-        <ul>
-            <li>Realizar a prova A2</li>
-            <a href=""> FEITO </a>
+
+        <ul *ngFor="let task of tasks">
+            <li>  <span class="id">{{ task.id }}</span> <span> | {{ task.desc }}</span></li>
+            <!-- <a href=""> FEITO </a>
             <a href=""> EDITAR </a>
-            <a href=""> EXCLUIR </a>
+            <a href=""> EXCLUIR </a> -->
         </ul>
     </div>
-</main>
+</main> 
+
+  
+   

@@ -25,7 +25,7 @@ export default class TaskUseCase{
             const taskServices = new TaskServices()
             const getActiveTasks = await taskServices.findAllActiveTasks()
 
-            return {resp: getActiveTasks, code:200}
+            return (getActiveTasks)
         }catch(err){
             return {resp: err, code: 400}
         }
@@ -75,9 +75,7 @@ export default class TaskUseCase{
             if (Object.keys(_input).length === 0) throw new Error('Argument Cant Be Null')
             if (_input.id != null) throw new Error('No need to send ID')
             
-            if (_input.name.length < 3 || typeof _input.name != "string") throw new Error('Invalid Name')
-            if (_input.desc.length < 3 || typeof _input.name != "string") throw new Error('Invalid Description')
-
+        
             const taskData:ITasks = {
                 name: _input.name,
                 desc: _input.desc,

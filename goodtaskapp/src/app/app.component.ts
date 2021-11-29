@@ -6,17 +6,19 @@ import { TaskService } from './services/task.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent   {
   title = 'goodtaskapp';
 
   constructor(private taskService : TaskService){ }
 
-  obterTodos(){
-    this.taskService.obterTodos()
-      .then(tasks => console.log(tasks))
-        .catch(error => console.error(error))
+  // obterTodos(){
+  //   this.taskService.obterTodos()
+  //     // .then(tasks => console.log(tasks))
+  //     //   .catch(error => console.error(error))
+      
     
-  }
+
+  // }
   ObterId(){
     this.taskService.ObterId(4)
       .then(tasks => console.log(tasks))
@@ -36,5 +38,8 @@ export class AppComponent {
 
 
   }
+
+      
+ 
 }
 

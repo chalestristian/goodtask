@@ -9,12 +9,12 @@ export class TaskRepository extends Repository<tasks> implements ITaskRepository
 
     findAllTasks(){
         return this.createQueryBuilder("tasks")
-            .getManyAndCount()
+            .getMany()
     }
     findAllActiveTasks(){
         return this.createQueryBuilder("tasks")
             .where('tasks.active = :bool', {bool: true})    
-            .getManyAndCount()
+            .getMany()
     }
 
     findById(id: number){

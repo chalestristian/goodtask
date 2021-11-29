@@ -42,7 +42,7 @@ export class TaskServices{
             await this._taskConn.close()
 
             if(findTasks){
-                return {message: `There are ${findTasks[1]} Tasks!`,task: findTasks}
+                return findTasks;
             }
             return {message: "Unexpected Error!"}
             
@@ -60,7 +60,7 @@ export class TaskServices{
             await this._taskConn.close()
 
             if(findTasks){
-                return {message: `There are ${findTasks[1]} Tasks!`,task: findTasks}
+                return findTasks;
             }
             return {message: "Unexpected Error!"}
             
