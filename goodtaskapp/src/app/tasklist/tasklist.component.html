@@ -1,17 +1,33 @@
 <main>
+    <header>
+        <div class="content-title">
+          <h1 class="global-title">GoodTasks</h1>
+        </div>
+        <div class="content-form">
+         
+            <form>
+              <!--<p>Name: <input type="text" name="name" [(ngModel)]="task.name"></p>-->
+              <input type="search" class="form-control" name="desc" placeholder="Criar nova task" [(ngModel)]="task.desc">
+              <button type="button" (click)="cadastrar()" class="btn btn-primary float-right">Add</button> 
+          </form>
+      
+        </div>
+      </header>
     <div>
         <h2>Tasks </h2>
     </div>
     <div>
 
-        <ul *ngFor="let task of tasks">
+    <ul *ngFor="let task of tasks">
             <li>  <span class="id">{{ task.id }}</span> <span> | {{ task.desc }}</span></li>
-            <!-- <a href=""> FEITO </a>
+            <a href=""> FEITO </a>
             <a href=""> EDITAR </a>
-            <a href=""> EXCLUIR </a> -->
-        </ul>
-    </div>
-</main> 
+            <a href=""> EXCLUIR </a> 
+    </ul>
 
-  
-   
+             
+    </div>   
+</main>      <!-- <div class="form-group">
+                    <input type="search" class="form-control" id="id" placeholder="Criar nova task">
+                  </div>
+                    <button type="submit" class="btn btn-primary float-right">Add</button> -->

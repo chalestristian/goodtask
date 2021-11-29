@@ -26,18 +26,18 @@ export class AppComponent   {
     }
   
 
-  CriarTask(){
-    const task: ITask = {
-      desc: "AHHHHHHHHHHHHHHHHHHHHH",
-      name: "BAAAAAAAAAAAAAAAAAAAAAA"
-    };
+  // CriarTask(){
+  //   const task: ITask = {
+  //     desc: "AHHHHHHHHHHHHHHHHHHHHH",
+  //     name: "BAAAAAAAAAAAAAAAAAAAAAA"
+  //   };
     
-    this.taskService.CriarTask(task)
-      .then(task => console.log('Adcionado'))
-      .catch(error => console.error(error))
+  //   this.taskService.CriarTask(task)
+  //     .then(task => console.log('Adcionado'))
+  //     .catch(error => console.error(error))
 
 
-  }
+  // }
 
       
  

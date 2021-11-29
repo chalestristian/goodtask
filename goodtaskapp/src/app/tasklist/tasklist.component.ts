@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TaskModel } from '../models/task.model';
 import { TaskService } from '../services/task.service';
 
 @Component({
@@ -7,16 +8,25 @@ import { TaskService } from '../services/task.service';
   styleUrls: ['./tasklist.component.css']
 })
 export class TasklistComponent implements OnInit {
-  
+  task: TaskModel = new TaskModel();
   tasks: Array<any> = new Array();
   
 
-  constructor(private taskService: TaskService ) { }
+  constructor(public taskService: TaskService ) { }
  
   // ngOnInit(): void {
    ngOnInit() {
-     this.ListarTasks();
+    this.ListarTasks();// TENTAR ADICIONAR ISSO NO 
   }
+    cadastrar(){
+      this.taskService.CriarTask(this.task).subscribe(task => {
+        this.task = new TaskModel();
+        this.ListarTasks();
+        
+      }, err =>{
+        console.log("Erro", err) 
+    })
+    }
 
     ListarTasks(){
       this.taskService.listarTasks().subscribe(tasks => {

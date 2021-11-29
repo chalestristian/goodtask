@@ -12,3 +12,19 @@ li{
     background-color: #626262;
     color: white;
 }
+header{
+    padding: 20px 0 45px 0;
+}
+.btn-primary{
+    font-size: 1em;
+    background-color: #4F4F4F;
+    border: #4F4F4F;
+    text-align: right;
+    padding: 10px 30px;
+}
+.form-control{
+    border-radius: 5px;
+}
+.content-title, .content-form{
+    margin: 20px 0px;
+}

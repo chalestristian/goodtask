@@ -1,6 +1,6 @@
-export interface ITasks {
+export interface ITasktasks {
     id?:number
-    name: string
+    name?: string
     desc: string
     active: boolean
     updated_at: string
