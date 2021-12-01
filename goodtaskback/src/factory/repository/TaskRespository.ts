@@ -53,5 +53,12 @@ export class TaskRepository extends Repository<tasks> implements ITaskRepository
           .where("id = :id", { id: id })
           .execute()
       }
+
+      deleteTask(id:ITasks["id"]){
+        return this.createQueryBuilder("tasks")
+          .delete()
+          .where("id = :id", { id: id })
+          .execute()
+      }
   
 }

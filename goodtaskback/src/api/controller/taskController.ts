@@ -47,4 +47,12 @@ export default class taskController{
         response.json(getAllTasks).status(getAllTasks.code)
         return response
     }
+    async DeleteTask(request: Request, response: Response) {
+        const taskUseCase = new TaskUseCase()
+
+        const DeleteTask = await taskUseCase.deleteTask(parseInt(request.params.id))
+
+        response.json({response: DeleteTask.resp}).status(DeleteTask.code)
+        return response
+    }
 } 

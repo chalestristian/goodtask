@@ -137,4 +137,21 @@ export class TaskServices{
             console.log(error)
         }
     }
+
+    async deleteTask(id){
+        try {
+            await this._taskConn.connect()
+            const taskRepo = this._taskConn.getCustomRepository(TaskRepository)
+
+            await taskRepo.disableTask(id)
+            const deleteTask = await taskRepo.delete(id)
+
+            await this._taskConn.close()
+
+            return {message: `Task Deleted!`,deleteTask: deleteTask}
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
 }

@@ -19,7 +19,7 @@ header{
     font-size: 1em;
     background-color: #4F4F4F;
     border: #4F4F4F;
-    text-align: right;
+    margin-top: 10px;
     padding: 10px 30px;
 }
 .form-control{

@@ -125,4 +125,16 @@ export default class TaskUseCase{
             return {resp: err, code: 400}
         }
     }
+
+    async deleteTask(id:ITasks['id']){
+        try{
+            const taskServices = new TaskServices()
+            if (id === undefined || id === NaN) throw new Error('Invalid ID')
+
+            const deleteTask = await taskServices.deleteTask(id);
+            return {resp: deleteTask, code:200}
+        }catch (err) {
+            return {resp: err, code: 400}
+        }
+    }
 }

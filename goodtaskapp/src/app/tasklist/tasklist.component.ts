@@ -18,6 +18,26 @@ export class TasklistComponent implements OnInit {
    ngOnInit() {
     this.ListarTasks();// TENTAR ADICIONAR ISSO NO 
   }
+    atualizar(id: number){
+      this.taskService.atualizarTask(id, this.task).subscribe(task => {
+        this.task = new TaskModel();
+        this.ListarTasks();
+        
+      }, err =>{
+        console.log("Erro", err) 
+    })
+    }
+    
+    remover(id: number){
+      this.taskService.removerTask(id).subscribe(task => {
+        this.task = new TaskModel();
+        this.ListarTasks();
+        }, err =>{
+          console.log("Erro", err) 
+      })
+    }
+
+
     cadastrar(){
       this.taskService.CriarTask(this.task).subscribe(task => {
         this.task = new TaskModel();

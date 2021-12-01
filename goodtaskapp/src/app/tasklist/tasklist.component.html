@@ -19,10 +19,16 @@
     <div>
 
     <ul *ngFor="let task of tasks">
-            <li>  <span class="id">{{ task.id }}</span> <span> | {{ task.desc }}</span></li>
-            <a href=""> FEITO </a>
-            <a href=""> EDITAR </a>
-            <a href=""> EXCLUIR </a> 
+            <li>
+              <span class="id"> {{ task.id }}</span>
+              <span> | {{ task.desc }}</span>
+              <span><button (click)="atualizar(task.id)">Editar</button></span>
+              <span><button (click)="remover(task.id)">Excluir</button></span>
+            
+            </li>
+              <!-- <a href=""> FEITO </a>
+              <a href=""> EDITAR </a>
+              <a href=""> EXCLUIR </a>  -->
     </ul>
 
              
