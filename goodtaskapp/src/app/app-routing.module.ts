@@ -1,13 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FilterComponent } from './filter/filter.component';
-import { TasklistComponent } from './tasklist/tasklist.component';
 
-const routes: Routes = [
 
-  // { path: '', component: TasklistComponent}
-  // { path: 'filter', component: FilterComponent}
-];
+const routes: Routes = [];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

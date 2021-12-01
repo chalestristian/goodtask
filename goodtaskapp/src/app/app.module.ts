@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TasklistComponent } from './tasklist/tasklist.component';
-import { FilterComponent } from './filter/filter.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from './services/task.service';
@@ -17,7 +17,7 @@ import { TaskService } from './services/task.service';
   declarations: [
     AppComponent,
     TasklistComponent,
-    FilterComponent,
+
   ],
   imports: [
     BrowserModule,

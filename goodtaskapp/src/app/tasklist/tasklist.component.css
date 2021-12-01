@@ -1,30 +1,41 @@
-li{
-    list-style: none;
-    background-color: #ebebeb;
-    padding: 20px;
-    font-size: 1.3em;
-    border-radius: 10px;
+.default-title{
+    font-family: 'Rampart One', cursive;
+    color: #4F4F4F;
+    font-weight: 900;
 }
-.id{
-    display: inline-block;
-    padding: 0px 10px;
+.status{
+    font-size: 0.5em;
     border-radius: 50px;
-    background-color: #626262;
-    color: white;
+    padding: 10px;
+    font-weight: 900;
+    color: #ffffff;
 }
-header{
-    padding: 20px 0 45px 0;
+#status-open{
+    background-color: #ec45457c;
+    border: 3px solid #da5e5e07;
+}
+#status-closed{
+    background-color: #458dec7c;
+    border: 3px solid #5e85da13;
 }
 .btn-primary{
-    font-size: 1em;
-    background-color: #4F4F4F;
-    border: #4F4F4F;
-    margin-top: 10px;
+    font-size: 1.5em;
+    font-weight: 900;
+    color: #ffffff;
+    background-color: #45ecb4;
+    border: 3px solid #45ecb491;
+    margin-top: 20px;
     padding: 10px 30px;
 }
 .form-control{
+    font-style: italic;
+    font-size: 1.5em;
+    padding: 30px;
     border-radius: 5px;
 }
-.content-title, .content-form{
-    margin: 20px 0px;
+.clear-space{
+   width: 0;
+}
+.task-description{
+    padding-left: 10px;
 }
