@@ -2,27 +2,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap'); /*Main title only*/
 
 *{font-family: 'Poppins', sans-serif;}
-body{background-color: #F9F7F2;}
+body, button{
+    background-color: #F9F7F2;
+    border: none;
+}
 
 header, table{
-    border: 1px solid red;
     padding: 25px 0px;
     margin: 50px 0px;
-    min-width: 100%;
-    
-   
+    min-width: 100%;   
 }
 
 h1{font-size: 8em;} /* Telas normais 5em */
 h2{font-size: 4em;} /* Telas normais 2em */
 
-td{
-    border: 1px solid blue;
-  
-}
+
 
 tr{
     margin: 100px 0px;
     font-size: 2em; /* Telas normais 1.5em */
-    border-bottom: 1px solid #4F4F4F;   
+ 
+}
+
+img{
+    width: 50px;
 }
