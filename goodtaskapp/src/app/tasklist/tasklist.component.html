@@ -18,9 +18,9 @@
      <tr *ngFor="let task of tasks" class="status-open">
       <td class="clear-space"><span id="status-open" class="status">pendente</span></td>
        <td><span class="task-description">{{task.desc}}</span></td>
-       <td class="clear-space"><span><button (click)="atualizar(task.id)">Editar</button></span></td>
-       <td class="clear-space"><span><button (click)="remover(task.id)">Excluir</button></span></td>
-       <td class="clear-space"><span><button (click)="desativarTask(task.id)">Concluir</button></span></td>
+       <td class="clear-space"><span><button (click)="atualizar(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c036d456bd014c479929f128323868dd33a47b25/goodtaskapp/src/assets/icons/edit_icon.svg" alt="Icone de editar"></button></span></td>
+       <td class="clear-space"><span><button (click)="remover(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c036d456bd014c479929f128323868dd33a47b25/goodtaskapp/src/assets/icons/delete-icon.svg" alt="Icone de excluir"></button></span></td>
+       <td class="clear-space"><span><button (click)="desativarTask(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c036d456bd014c479929f128323868dd33a47b25/goodtaskapp/src/assets/icons/check_icon.svg" alt="Icone de concluir"></button></span></td>
       </tr>
   
   </table>
@@ -52,8 +52,8 @@
           <tr *ngFor="let taskclosed of tasksclosed" class="status-closed">
             <td class="clear-space"><span id="status-closed"  class="status">concluído</span></td>
             <td><span class="task-description">{{taskclosed.desc}}</span></td>
-            <td class="clear-space"><span><button (click)="atualizar(taskclosed.id)">Editar</button></span></td>
-            <td class="clear-space"><span><button (click)="remover(taskclosed.id)">Excluir</button></span></td>
+            <td class="clear-space"><span><button (click)="atualizar(taskclosed.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c036d456bd014c479929f128323868dd33a47b25/goodtaskapp/src/assets/icons/edit_icon.svg" alt="Icone de editar"></button></span></td>
+            <td class="clear-space"><span><button (click)="remover(taskclosed.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c036d456bd014c479929f128323868dd33a47b25/goodtaskapp/src/assets/icons/delete-icon.svg" alt="Icone de excluir"></button></span></td>
             <td class="clear-space"><span><button (click)="desativarTask(taskclosed.id)">Concluir</button></span></td>
            </tr>
 
