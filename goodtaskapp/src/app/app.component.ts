@@ -19,11 +19,11 @@ export class AppComponent   {
     
 
   // }
-  ObterId(){
-    this.taskService.ObterId(4)
-      .then(tasks => console.log(tasks))
-      .catch(error => console.error(error))
-    }
+  // ObterId(){
+  //   this.taskService.ObterId(4)
+  //     .then(tasks => console.log(tasks))
+  //     .catch(error => console.error(error))
+  //   }
   
 
   // CriarTask(){

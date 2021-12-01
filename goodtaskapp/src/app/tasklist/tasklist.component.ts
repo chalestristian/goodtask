@@ -17,7 +17,6 @@ export class TasklistComponent implements OnInit {
 
   constructor(public taskService: TaskService ) { }
  
-  // ngOnInit(): void {
    ngOnInit() {
     this.ListarTasks();
     this.ListarTasksClosed();
@@ -36,11 +35,13 @@ export class TasklistComponent implements OnInit {
       this.taskService.removerTask(id).subscribe(task => {
         this.task = new TaskModel();
         this.ListarTasks();
+      
         }, err =>{
           console.log("Erro", err) 
       })
     }
 
+    
 
     cadastrar(){
       this.taskService.CriarTask(this.task).subscribe(task => {

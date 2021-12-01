@@ -18,9 +18,9 @@
      <tr *ngFor="let task of tasks" class="status-open">
       <td class="clear-space"><span id="status-open" class="status">pendente</span></td>
        <td><span class="task-description">{{task.desc}}</span></td>
-       <td class="clear-space"><span><button (click)="atualizar(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c036d456bd014c479929f128323868dd33a47b25/goodtaskapp/src/assets/icons/edit_icon.svg" alt="Icone de editar"></button></span></td>
-       <td class="clear-space"><span><button (click)="remover(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c036d456bd014c479929f128323868dd33a47b25/goodtaskapp/src/assets/icons/delete-icon.svg" alt="Icone de excluir"></button></span></td>
-       <td class="clear-space"><span><button (click)="desativarTask(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c036d456bd014c479929f128323868dd33a47b25/goodtaskapp/src/assets/icons/check_icon.svg" alt="Icone de concluir"></button></span></td>
+       <td class="clear-space"><span><button (click)="atualizar(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/active_edit_icon.svg" alt="Icone de editar"></button></span></td>
+       <td class="clear-space"><span><button (click)="remover(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/active_delete_icon.svg" alt="Icone de excluir"></button></span></td>
+       <td class="clear-space"><span><button (click)="desativarTask(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/active_check_icon.svg" alt="Icone de concluir"></button></span></td>
       </tr>
   
   </table>
@@ -49,12 +49,12 @@
 
       <table >
         
-          <tr *ngFor="let taskclosed of tasksclosed" class="status-closed">
+          <tr *ngFor="let tasksclosed of tasksclosed" class="status-closed">
             <td class="clear-space"><span id="status-closed"  class="status">concluído</span></td>
-            <td><span class="task-description">{{taskclosed.desc}}</span></td>
-            <td class="clear-space"><span><button (click)="atualizar(taskclosed.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c036d456bd014c479929f128323868dd33a47b25/goodtaskapp/src/assets/icons/edit_icon.svg" alt="Icone de editar"></button></span></td>
-            <td class="clear-space"><span><button (click)="remover(taskclosed.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c036d456bd014c479929f128323868dd33a47b25/goodtaskapp/src/assets/icons/delete-icon.svg" alt="Icone de excluir"></button></span></td>
-            <td class="clear-space"><span><button (click)="desativarTask(taskclosed.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/4cda2369aa4779ff79a3b07253cc25b16798a21e/goodtaskapp/src/assets/icons/checked_icon.svg" alt="Icone de concluido"></button></span></td>
+            <td><span class="task-description">{{tasksclosed.desc}}</span></td>
+            <td class="clear-space"><span><button (click)="atualizar(tasksclosed.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/done_edit_icon.svg" alt="Icone de editar"></button></span></td>
+            <td class="clear-space"><span><button (click)="remover(tasksclosed.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/done_delete_icon.svg" alt="Icone de excluir"></button></span></td>
+            <td class="clear-space"><span><button (click)="tasksclosed(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/done_checked_icon.svg" alt="Icone de concluido"></button></span></td>
            </tr>
 
        </table>

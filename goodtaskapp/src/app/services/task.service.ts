@@ -16,30 +16,35 @@ export class TaskService {
   
   listarTasks() : Observable<any>{
       return this.http.get(`${API_PATH}tasks`)
-    }
+  }
 
-    listarTasksClosed() : Observable<any>{
-      return this.http.get(`${API_PATH}tasks/disabled`)
-    }
-    CriarTask(task: ITask): Observable<any>{
-      return this.http.post(`${API_PATH}tasks`, task);
-    }
+  listarTasksClosed() : Observable<any>{
+    return this.http.get(`${API_PATH}tasks/disabled`)
+  }
 
-    ObterId(id: number){
-      return this.http.get<ITask>(`${API_PATH}tasks/${id}`).toPromise();
+  CriarTask(task: ITask): Observable<any>{
+    return this.http.post(`${API_PATH}tasks`, task);
+  }
 
-    }
+  ObterId(id: number){
+    return this.http.get<ITask>(`${API_PATH}tasks/${id}`).toPromise();
 
-    atualizarTask(id:any, task: TaskModel) : Observable<any>{
-      return this.http.put(`${API_PATH}tasks/update/`.concat(id), task);
-    }
+  }
 
-    removerTask(id: any) : Observable<any>{
-      return this.http.delete(`${API_PATH}tasks/delete/`.concat(id));
-    }
-    desativarTask(id: any,  task: TaskModel) : Observable<any>{
-      return this.http.put(`${API_PATH}tasks/disable/`.concat(id), task);
-    }
+  atualizarTask(id:any, task: TaskModel) : Observable<any>{
+    return this.http.put(`${API_PATH}tasks/update/`.concat(id), task);
+  }
+
+  removerTask(id: any) : Observable<any>{
+    return this.http.delete(`${API_PATH}tasks/delete/`.concat(id));
+  }
   
-   }
+  
+  
+  
+  desativarTask(id: any,  task: TaskModel) : Observable<any>{
+    return this.http.put(`${API_PATH}tasks/disable/`.concat(id), task);
+  }
+  
+}
 
