@@ -7,7 +7,7 @@
 
 ## SOBRE:
 
-Fruto de um projeto acadêmico do UniBh em parceria com a empresa Ci&T, surgiu-se o GoodTasks. Aplicativo cujo o objetivo é a criação e gerenciamento de listas de tarefas de maneira facil, simples e intuitiva.
+Fruto de um projeto acadêmico do UniBh em parceria com a empresa Ci&T, surgiu-se o GoodTasks. Aplicação cujo o objetivo é a criação e gerenciamento de listas de tarefas de maneira facil, simples e intuitiva.
 
 O objetivo da aplicação é facilitar o processo de criação e gerenciamento de tarefas, por isso, a aplicação foi desenvolvida com uma interface minimalista e agradável, assim, utilizando esse app, você estará habilitado para criar e gerenciar tarefas em segundos.
 
