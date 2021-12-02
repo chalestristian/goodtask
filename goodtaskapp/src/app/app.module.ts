@@ -10,14 +10,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { TaskService } from './services/task.service';
 
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
     TasklistComponent,
-
+    
   ],
   imports: [
     BrowserModule,

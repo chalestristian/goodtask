@@ -17,11 +17,6 @@ export class TaskRepository extends Repository<tasks> implements ITaskRepository
             .where('tasks.active = :bool', {bool: true})    
             .getMany()
     }
-    findAllDesactivedTasks(){
-        return this.createQueryBuilder("tasks")
-            .where('tasks.active = :bool', {bool: false})    
-            .getMany()
-    }
 
     findById(id: number){
         return this.createQueryBuilder("tasks")
@@ -59,21 +54,8 @@ export class TaskRepository extends Repository<tasks> implements ITaskRepository
           .where("id = :id", { id: id })
           .execute()
       }
-      activeTask(id:ITasks["id"]){
-        return this.createQueryBuilder("tasks")
-          .update()
-          .set({active: true, updated_at: new Date().toISOString()})
-          .where("id = :id", { id: id })
-          .execute()
-      }
+ 
       deleteTask(id:ITasks["id"]){
-        return this.createQueryBuilder("tasks")
-          .delete()
-          .where("id = :id", { id: id })
-          .execute()
-      }
-
-      deleteTaskDisabled(id:ITasks["id"]){
         return this.createQueryBuilder("tasks")
           .delete()
           .where("id = :id", { id: id })

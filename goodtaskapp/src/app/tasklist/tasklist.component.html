@@ -4,32 +4,22 @@
   </div>
   <div class="content-form">
     <form>
-      <input type="search" class="form-control" name="desc" placeholder="Criar nova task" [(ngModel)]="task.desc" autofocus>
-      <button type="button" (click)="create()" class="btn btn-primary float-right">Add</button>
+      <input type="search" class="form-control" name="desc" placeholder="Criar ou atualizar task" [(ngModel)]="task.desc" autofocus>
+      <button type="button" (click)="create()" class="btn btn-primary float-right">Concluir</button>
     </form>
   </div>
 </header>
-  
-<main>
-
+<main>  
   <div>
     <h2 class="default-title">Minhas Taks</h2>
-  <table>  
-    <tr *ngFor="let task of tasks">
-      <td class=" status"><span class="status-spn" [ngClass]="{'status-open': task.name === 'pendente', 'status-closed': task.name === 'concluido'}">{{task.name}}</span></td>
-       <td><span class="task-description"  [ngClass]="{'status-open': task.name === 'pendente', 'status-closed': task.name === 'concluido'}">{{task.desc}}</span></td>
-       <td class="clear-space"><span><button (click)="update(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/active_edit_icon.svg" alt="Icone de editar"></button></span></td>
-       <td class="clear-space"><span><button (click)="remover(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/active_delete_icon.svg" alt="Icone de excluir"></button></span></td>
-       <td class="clear-space"><span><button (click)="desativarTask(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/active_check_icon.svg" alt="Icone de concluir"></button></span></td>
-    </tr>
- </table>
- </div>
-
-
-
-
-
-
-
-             
-  
+    <table>  
+      <tr *ngFor="let task of tasks">
+        <td class=" status"><span class="status-spn" [ngClass]="{'status-open': task.name === 'pendente', 'status-closed': task.name === 'concluido'}">{{task.name}}</span></td>
+        <td><span class="task-description">{{task.desc}}</span></td> <!--  ngClass]="{'status-open': task.name === 'pendente', 'status-closed': task.name === 'concluido'}"--> 
+        <td class="clear-space"><span><button (click)="update(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c3d4002476ad19122e745a337aba153caef9ee28/goodtaskapp/src/assets/icons/edit_icon.svg" alt="Icone de editar"></button></span></td>
+        <td class="clear-space"><span><button (click)="remover(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c3d4002476ad19122e745a337aba153caef9ee28/goodtaskapp/src/assets/icons/delete_icon.svg" alt="Icone de excluir"></button></span></td>
+        <td class="clear-space"><span><button (click)="disable(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c3d4002476ad19122e745a337aba153caef9ee28/goodtaskapp/src/assets/icons/done_icon.svg" alt="Icone de concluir"></button></span></td>
+      </tr>      
+    </table>
+  </div>
+</main>

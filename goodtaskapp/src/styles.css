@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap'); /*Main title only*/
 
 *{font-family: 'Poppins', sans-serif;}
+
 body, button{
     background-color: #F9F7F2;
     border: none;
@@ -14,14 +15,12 @@ header, table{
 }
 
 h1{font-size: 8em;} /* Telas normais 5em */
+
 h2{font-size: 4em;} /* Telas normais 2em */
-
-
 
 tr{
     margin: 100px 0px;
     font-size: 2em; /* Telas normais 1.5em */
-    
 }
 
 td{     
@@ -30,5 +29,11 @@ td{
 
 img{
     width: 50px;
-    
+    border-radius: 50px;    
+    padding: 5px;
+    background-color: #4f4f4f1a;
+}
+
+img:hover{  
+    background-color: #12a87673;
 }

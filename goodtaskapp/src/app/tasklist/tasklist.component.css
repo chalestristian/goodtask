@@ -12,8 +12,6 @@
     border-radius: 50px;
     padding: 5px;
 }
-
-
 .status-closed{
     background-color: #458dec7c;
     border: 3px solid #5e85da13;
@@ -26,10 +24,14 @@
     font-size: 1.5em;
     font-weight: 900;
     color: #ffffff;
-    background-color: #45ecb4;
-    border: 3px solid #45ecb491;
+    background-color: #12a876c5;
+    border: 3px solid #12a876c5;
     margin-top: 20px;
     padding: 10px 30px;
+}
+.btn-primary:hover{
+    background-color: #12a876;
+    border: 3px solid #12a876;
 }
 .form-control{
     font-style: italic;
@@ -38,7 +40,7 @@
     border-radius: 5px;
 }
 .clear-space{
-   width: 0;
+    width: 0;
 }
 .task-description{
     border-radius: 50px;
