@@ -9,7 +9,7 @@ import { TaskService } from './services/task.service';
 export class AppComponent   {
   title = 'goodtaskapp';
 
-  constructor(private taskService : TaskService){ }
+  // constructor(private taskService : TaskService){ }
 
   // obterTodos(){
   //   this.taskService.obterTodos()

@@ -21,9 +21,14 @@ h2{font-size: 4em;} /* Telas normais 2em */
 tr{
     margin: 100px 0px;
     font-size: 2em; /* Telas normais 1.5em */
- 
+    
+}
+
+td{     
+    padding: 15px 0;
 }
 
 img{
     width: 50px;
+    
 }

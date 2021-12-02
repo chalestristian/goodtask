@@ -41,9 +41,11 @@ export class TaskServices{
             const findTasks = await taskRepo.findAllTasks()
             await this._taskConn.close()
 
+       
             if(findTasks){
                 return findTasks;
             }
+
             return {message: "Unexpected Error!"}
             
         } catch (error) {
@@ -69,6 +71,23 @@ export class TaskServices{
         }
     }
 
+    async findAllDesactivedTasks(){
+        try {
+            await this._taskConn.connect()
+            const taskRepo = this._taskConn.getCustomRepository(TaskRepository)
+
+            const findTasks = await taskRepo.findAllDesactivedTasks()
+            await this._taskConn.close()
+
+            if(findTasks){
+                return findTasks;
+            }
+            return {message: "Unexpected Error!"}
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
     async findTasksById(id){
         try {
             await this._taskConn.connect()
@@ -138,6 +157,22 @@ export class TaskServices{
         }
     }
 
+    async activeTask(id){
+        try {
+            await this._taskConn.connect()
+            const taskRepo = this._taskConn.getCustomRepository(TaskRepository)
+
+            await taskRepo.activeTask(id)
+            const activeTask = await taskRepo.findById(id)
+
+            await this._taskConn.close()
+
+            return {message: `Task Enabled!`,activeTask: activeTask}
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
     async deleteTask(id){
         try {
             await this._taskConn.connect()
@@ -149,6 +184,23 @@ export class TaskServices{
             await this._taskConn.close()
 
             return {message: `Task Deleted!`,deleteTask: deleteTask}
+            
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    async deleteTaskDisabled(id){
+        try {
+            await this._taskConn.connect()
+            const taskRepo = this._taskConn.getCustomRepository(TaskRepository)
+
+            await taskRepo.disableTask(id)
+            const deledeleteTaskDisabled = await taskRepo.delete(id)
+
+            await this._taskConn.close()
+
+            return {message: `Task Deleted!`,deldeleteTaskDisabled : deledeleteTaskDisabled}
             
         } catch (error) {
             console.log(error)

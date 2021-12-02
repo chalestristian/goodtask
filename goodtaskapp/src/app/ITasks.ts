@@ -5,5 +5,4 @@ export interface ITask{
     active?: boolean
     updated_at?: string
     created_at?: string
-
 }

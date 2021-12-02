@@ -30,13 +30,23 @@ export default class TaskUseCase{
             return {resp: err, code: 400}
         }
     }
+    async getAllDesactivedTasks(){
+        try{
+            const taskServices = new TaskServices()
+            const getDesactivedTasks = await taskServices.findAllDesactivedTasks()
+
+            return (getDesactivedTasks)
+        }catch(err){
+            return {resp: err, code: 400}
+        }
+    }
 
     async getAllTasks(){
         try{
             const taskServices = new TaskServices()
             const getActiveTasks = await taskServices.findAllTasks()
 
-            return {resp: getActiveTasks, code:200}
+            return getActiveTasks
         }catch(err){
             return {resp: err, code: 400}
         }
@@ -126,6 +136,18 @@ export default class TaskUseCase{
         }
     }
 
+    async activateTask(id:ITasks['id']){
+        try{
+            const taskServices = new TaskServices()
+            if (id === undefined || id === NaN) throw new Error('Invalid ID')
+
+            const activeTask = await taskServices.activeTask(id);
+            return {resp: activeTask, code:200}
+        }catch (err) {
+            return {resp: err, code: 400}
+        }
+    }
+
     async deleteTask(id:ITasks['id']){
         try{
             const taskServices = new TaskServices()
@@ -133,6 +155,19 @@ export default class TaskUseCase{
 
             const deleteTask = await taskServices.deleteTask(id);
             return {resp: deleteTask, code:200}
+        }catch (err) {
+            return {resp: err, code: 400}
+        }
+    }
+
+
+    async deleteTaskDisabled(id:ITasks['id']){
+        try{
+            const taskServices = new TaskServices()
+            if (id === undefined || id === NaN) throw new Error('Invalid ID')
+
+            const deleteTaskDisabled = await taskServices.deleteTask(id);
+            return {resp: deleteTaskDisabled, code:200}
         }catch (err) {
             return {resp: err, code: 400}
         }

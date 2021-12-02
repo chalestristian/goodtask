@@ -9,11 +9,17 @@ export class TaskRepository extends Repository<tasks> implements ITaskRepository
 
     findAllTasks(){
         return this.createQueryBuilder("tasks")
-            .getMany()
+        .getMany()
+
     }
     findAllActiveTasks(){
         return this.createQueryBuilder("tasks")
             .where('tasks.active = :bool', {bool: true})    
+            .getMany()
+    }
+    findAllDesactivedTasks(){
+        return this.createQueryBuilder("tasks")
+            .where('tasks.active = :bool', {bool: false})    
             .getMany()
     }
 
@@ -49,12 +55,25 @@ export class TaskRepository extends Repository<tasks> implements ITaskRepository
     disableTask(id:ITasks["id"]){
         return this.createQueryBuilder("tasks")
           .update()
-          .set({active: false, updated_at: new Date().toISOString()})
+          .set({active: false, name: 'concluido', updated_at: new Date().toISOString()})
+          .where("id = :id", { id: id })
+          .execute()
+      }
+      activeTask(id:ITasks["id"]){
+        return this.createQueryBuilder("tasks")
+          .update()
+          .set({active: true, updated_at: new Date().toISOString()})
+          .where("id = :id", { id: id })
+          .execute()
+      }
+      deleteTask(id:ITasks["id"]){
+        return this.createQueryBuilder("tasks")
+          .delete()
           .where("id = :id", { id: id })
           .execute()
       }
 
-      deleteTask(id:ITasks["id"]){
+      deleteTaskDisabled(id:ITasks["id"]){
         return this.createQueryBuilder("tasks")
           .delete()
           .where("id = :id", { id: id })

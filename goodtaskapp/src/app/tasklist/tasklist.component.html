@@ -2,64 +2,31 @@
   <div class="content-title">
     <h1 class="default-title">GoodTasks</h1>
   </div>
-
   <div class="content-form">
     <form>
       <input type="search" class="form-control" name="desc" placeholder="Criar nova task" [(ngModel)]="task.desc" autofocus>
-      <button type="button" (click)="cadastrar()" class="btn btn-primary float-right">Add</button>
+      <button type="button" (click)="create()" class="btn btn-primary float-right">Add</button>
     </form>
-  </div>    
+  </div>
 </header>
   
 <main>
+
   <div>
-    <h2 class="default-title">Fazer:</h2>
+    <h2 class="default-title">Minhas Taks</h2>
   <table>  
-     <tr *ngFor="let task of tasks" class="status-open">
-      <td class="clear-space"><span id="status-open" class="status">pendente</span></td>
-       <td><span class="task-description">{{task.desc}}</span></td>
-       <td class="clear-space"><span><button (click)="atualizar(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/active_edit_icon.svg" alt="Icone de editar"></button></span></td>
+    <tr *ngFor="let task of tasks">
+      <td class=" status"><span class="status-spn" [ngClass]="{'status-open': task.name === 'pendente', 'status-closed': task.name === 'concluido'}">{{task.name}}</span></td>
+       <td><span class="task-description"  [ngClass]="{'status-open': task.name === 'pendente', 'status-closed': task.name === 'concluido'}">{{task.desc}}</span></td>
+       <td class="clear-space"><span><button (click)="update(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/active_edit_icon.svg" alt="Icone de editar"></button></span></td>
        <td class="clear-space"><span><button (click)="remover(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/active_delete_icon.svg" alt="Icone de excluir"></button></span></td>
        <td class="clear-space"><span><button (click)="desativarTask(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/active_check_icon.svg" alt="Icone de concluir"></button></span></td>
-      </tr>
-  
-  </table>
-    <!-- <h2 class="default-title">Fazer:</h2>
-    <ul>
-      <li *ngFor="let task of tasks" class="status-open">
-        <span>{{task.desc}}</span>
-        <span id="status-open" class="status float-right">pendente</span>
-        <span><button (click)="atualizar(task.id)">Editar</button></span>
-        <span><button (click)="remover(task.id)">Excluir</button></span>
-        <span><button (click)="desativarTask(task.id)">Concluir</button></span>
-      </li>
-    </ul> -->
-  </div>
-  <div>
-    <h2 class="default-title">Feito:</h2>
-    <!-- <ul>
-        <li *ngFor="let taskclosed of tasksclosed">
-          <span> {{ taskclosed.desc }}</span>
-          <span id="status-closed"  class="status float-right">concluído</span>
-          <span><button (click)="atualizar(taskclosed.id)">Editar</button></span>
-          <span><button (click)="remover(taskclosed.id)">Excluir</button></span>
-          <span><button (click)="desativarTask(taskclosed.id)">Concluir</button></span>
-        </li>
-      </ul> -->
+    </tr>
+ </table>
+ </div>
 
-      <table >
-        
-          <tr *ngFor="let tasksclosed of tasksclosed" class="status-closed">
-            <td class="clear-space"><span id="status-closed"  class="status">concluído</span></td>
-            <td><span class="task-description">{{tasksclosed.desc}}</span></td>
-            <td class="clear-space"><span><button (click)="atualizar(tasksclosed.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/done_edit_icon.svg" alt="Icone de editar"></button></span></td>
-            <td class="clear-space"><span><button (click)="remover(tasksclosed.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/done_delete_icon.svg" alt="Icone de excluir"></button></span></td>
-            <td class="clear-space"><span><button (click)="tasksclosed(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/6335f586c7d745fb59d36e9defe2933c689bfd37/goodtaskapp/src/assets/icons/done_checked_icon.svg" alt="Icone de concluido"></button></span></td>
-           </tr>
 
-       </table>
-  </div>
-  
+
 
 
 

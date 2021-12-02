@@ -39,12 +39,29 @@ export default class taskController{
         return response
     }
 
+    async ActiveTask(request: Request, response: Response) {
+        const taskUseCase = new TaskUseCase()
+
+        const newTaskRequest = await taskUseCase.activateTask(parseInt(request.params.id))
+
+        response.json({response: newTaskRequest.resp}).status(newTaskRequest.code)
+        return response
+    }
+
     async GetAllTasks(request: Request, response: Response){
         const taskUseCase = new TaskUseCase()
 
         const getAllTasks = await taskUseCase.getAllTasks()
 
-        response.json(getAllTasks).status(getAllTasks.code)
+        response.json(getAllTasks)
+        return response
+    }
+    async GetDesactivedTasks(request: Request, response: Response){
+        const taskUseCase = new TaskUseCase()
+
+        const getAllDesactivedTasks = await taskUseCase.getAllDesactivedTasks()
+
+        response.json(getAllDesactivedTasks)
         return response
     }
     async DeleteTask(request: Request, response: Response) {
@@ -53,6 +70,15 @@ export default class taskController{
         const DeleteTask = await taskUseCase.deleteTask(parseInt(request.params.id))
 
         response.json({response: DeleteTask.resp}).status(DeleteTask.code)
+        return response
+    }
+
+    async DeleteTaskDisabled (request: Request, response: Response) {
+        const taskUseCase = new TaskUseCase()
+
+        const DeleteTaskDisabled = await taskUseCase.deleteTaskDisabled(parseInt(request.params.id))
+
+        response.json({response: DeleteTaskDisabled.resp}).status(DeleteTaskDisabled.code)
         return response
     }
 } 
