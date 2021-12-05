@@ -18,7 +18,7 @@ O objetivo da aplicação é facilitar o processo de criação e gerenciamento d
 
 Thales Cristian - [github.com](https://github.com/chalestristian)
 
-Marcio Gomes - [github.com](https://github.com/marcio-gomes-neto)
+Márcio Gomes - [github.com](https://github.com/marcio-gomes-neto)
 
 Neuber Tavares - [github.com](https://github.com/neubertavares)
 
@@ -30,7 +30,7 @@ Luisa Rosendo - [github.com](https://github.com/luisarosendo)
 
 **FRONTEND:** Angular & Bootstrap
 
-**BACKEND:** NodeJs, Express, TypeOrm, DotEnv
+**BACKEND:** NodeJs, Typescript, Express, TypeOrm, DotEnv
 
 **BANCO DE DADOS:** PostgreSQL 
 
