@@ -7,7 +7,7 @@
 
 ## SOBRE:
 
-Fruto de um projeto acadêmico do UniBh em parceria com a empresa Ci&T, surgiu-se o GoodTasks. Aplicativo cujo o objetivo é a criação e gerenciamento de listas de tarefas de maneira facil, simples e intuitiva.
+Fruto de um projeto acadêmico do UniBh em parceria com a empresa Ci&T, surgiu-se o GoodTasks. Aplicação cujo o objetivo é a criação e gerenciamento de listas de tarefas de maneira facil, simples e intuitiva.
 
 O objetivo da aplicação é facilitar o processo de criação e gerenciamento de tarefas, por isso, a aplicação foi desenvolvida com uma interface minimalista e agradável, assim, utilizando esse app, você estará habilitado para criar e gerenciar tarefas em segundos.
 
@@ -18,7 +18,7 @@ O objetivo da aplicação é facilitar o processo de criação e gerenciamento d
 
 Thales Cristian - [github.com](https://github.com/chalestristian)
 
-Marcio Gomes - [github.com](https://github.com/marcio-gomes-neto)
+Márcio Gomes - [github.com](https://github.com/marcio-gomes-neto)
 
 Neuber Tavares - [github.com](https://github.com/neubertavares)
 
@@ -30,7 +30,7 @@ Luisa Rosendo - [github.com](https://github.com/luisarosendo)
 
 **FRONTEND:** Angular & Bootstrap
 
-**BACKEND:** NodeJs, Express, TypeOrm, DotEnv
+**BACKEND:** NodeJs, Typescript, Express, TypeOrm, DotEnv
 
 **BANCO DE DADOS:** PostgreSQL 
 
@@ -48,3 +48,7 @@ git clone https://github.com/chalestristian/goodtask.git
 ```
 - 
 
+<<<<<<< HEAD
+=======
+Caso você seja Dev ou tenha familiaridade com as tecnologias acima, poderá excecutar o projeto localmente, seguindo os passos abaixo.
+>>>>>>> 1b0564a87e6f1898da9ea4327361203066a29862
