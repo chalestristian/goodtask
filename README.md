@@ -46,9 +46,42 @@ Caso você seja Dev ou tenha familiaridade com as tecnologias acima, poderá exc
 ```
 git clone https://github.com/chalestristian/goodtask.git
 ```
-- 
+Entre na pasta do projeto e execute:
+```
+npm install 
+```
+Crie uma nova tabela de banco de dados conforme abaixo (Sugerimos o uso do pgAdmin4 para isso):
+```
+CREATE DATABASE tasks
+    WITH 
+    OWNER = postgres
+    ENCODING = 'UTF8'
+    CONNECTION LIMIT = -1;
 
-<<<<<<< HEAD
-=======
-Caso você seja Dev ou tenha familiaridade com as tecnologias acima, poderá excecutar o projeto localmente, seguindo os passos abaixo.
->>>>>>> 1b0564a87e6f1898da9ea4327361203066a29862
+CREATE TABLE public.tasks
+(
+    id serial NOT NULL,
+    name character varying(255) NOT NULL,
+    "desc" character varying(255) NOT NULL,
+    active boolean NOT NULL,
+    updated_at character varying(255) NOT NULL,
+    created_at character varying(255) NOT NULL
+);
+
+ALTER TABLE IF EXISTS public.tasks
+    OWNER to postgres;
+    
+```
+Crie um arquivo .env para conectar ao banco de dados (similar a):
+
+```
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=usuario
+DB_PASSWORD=senha
+DB_DATABASE=tasks
+```
+Por fm, rode:
+```
+npm run build 
+```
