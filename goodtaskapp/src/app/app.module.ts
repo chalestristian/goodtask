@@ -23,6 +23,10 @@ import { TaskService } from './services/task.service';
     HttpClientModule,
     FormsModule
   ],
+  exports: [
+    TasklistComponent,
+  ],
+
   providers: [HttpClientModule, TaskService],
   bootstrap: [AppComponent]
 })

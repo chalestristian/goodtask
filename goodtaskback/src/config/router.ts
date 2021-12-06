@@ -7,7 +7,7 @@ const router = express.Router()
 router.get('/tasks', tasks.GetTasks)
 router.get('/tasks/all', tasks.GetAllTasks)
 router.get('/tasks/:id', tasks.GetTasks)
-
+router.get('/tasks/disable/:id', tasks.DeactiveTask)
 router.post('/tasks', tasks.AddTask)
 router.put('/tasks/update/:id', tasks.UpdateTask)
 router.put('/tasks/disable/:id', tasks.DeactiveTask)

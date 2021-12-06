@@ -36,8 +36,15 @@ Luisa Rosendo - [github.com](https://github.com/luisarosendo)
 
 ---
 
-## COMO EXCECUTAR?
+## COMO EXCECUTAR:
 
-Nosso app ainda está em desenvolvimento, por isso, não temos um excecutável. Antecipamos que o excecutável estará disponível em breve.
+Nosso app ainda está em desenvolvimento, por isso, não temos um excecutável.
+Caso você seja Dev ou tenha familiaridade com as tecnologias acima, poderá excecutar o projeto localmente, seguindo os passos abaixo:
 
-Caso você seja Dev ou tenha familiaridade com as tecnologias acima, poderá excecutar o projeto localmente, seguindo os passos abaixo.
+**Primeiramente, vamos configurar a api (goodtaskback):**
+
+```
+git clone https://github.com/chalestristian/goodtask.git
+```
+- 
+

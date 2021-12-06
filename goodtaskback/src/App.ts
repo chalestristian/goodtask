@@ -2,7 +2,6 @@ import express from "express";
 import setupMiddlewares from "./config/middlewares";
 import router from "./config/router";
 import dotenv from 'dotenv'
-var cors = require('cors')
 
 
 const app = express();
@@ -11,7 +10,26 @@ dotenv.config()
 setupMiddlewares(app)
 
 
-app.use(cors())
+
+app.use(function (req, res, next) {
+
+    // Website you wish to allow to connect
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
+    // Request methods you wish to allow
+    res.setHeader('Access-Control-Allow-Methods', '*');
+
+    // Request headers you wish to allow
+    res.setHeader('Access-Control-Allow-Headers', '*');
+
+    // Set to true if you need the website to include cookies in the requests sent
+    // to the API (e.g. in case you use sessions)
+
+
+    // Pass to next layer of middleware
+    next();
+});
+
 
 app.use('/api', router)
 

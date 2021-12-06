@@ -12,6 +12,7 @@ header, table{
     padding: 25px 0px;
     margin: 50px 0px;
     min-width: 100%;   
+    border: 1px solid red;
 }
 
 h1{font-size: 8em;} /* Telas normais 5em */
@@ -25,6 +26,7 @@ tr{
 
 td{     
     padding: 15px 0;
+    border: 1px solid blue;
 }
 
 img{

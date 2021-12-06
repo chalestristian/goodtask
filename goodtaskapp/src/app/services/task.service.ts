@@ -33,8 +33,10 @@ export class TaskService {
     return this.http.delete(`${API_PATH}tasks/delete/`.concat(id));
   }
     
+
   desativarTask(id: any,  task: TaskModel) : Observable<any>{
     return this.http.put(`${API_PATH}tasks/disable/`.concat(id), task);
   }  
+
 }
 

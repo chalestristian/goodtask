@@ -9,17 +9,41 @@
     </form>
   </div>
 </header>
+  
 <main>  
   <div>
     <h2 class="default-title">Minhas Taks</h2>
     <table>  
-      <tr *ngFor="let task of tasks">
+      <tr *ngFor="let task of tasks; let item of checklist">
+        <td class="clear-space"><input type="checkbox" [(ngModel)]="item.isSelected" name="list_name" value="{{item.id}}" (change)="isAllSelected()" />{{item.value}}</td>
         <td class=" status"><span class="status-spn" [ngClass]="{'status-open': task.name === 'pendente', 'status-closed': task.name === 'concluido'}">{{task.name}}</span></td>
-        <td><span class="task-description">{{task.desc}}</span></td> <!--  ngClass]="{'status-open': task.name === 'pendente', 'status-closed': task.name === 'concluido'}"--> 
+        <td><span class="task-description">{{task.desc}}</span></td>
         <td class="clear-space"><span><button (click)="update(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c3d4002476ad19122e745a337aba153caef9ee28/goodtaskapp/src/assets/icons/edit_icon.svg" alt="Icone de editar"></button></span></td>
         <td class="clear-space"><span><button (click)="remover(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c3d4002476ad19122e745a337aba153caef9ee28/goodtaskapp/src/assets/icons/delete_icon.svg" alt="Icone de excluir"></button></span></td>
         <td class="clear-space"><span><button (click)="disable(task.id)"><img src="https://raw.githubusercontent.com/chalestristian/goodtask/c3d4002476ad19122e745a337aba153caef9ee28/goodtaskapp/src/assets/icons/done_icon.svg" alt="Icone de concluir"></button></span></td>
-      </tr>      
+      </tr>
+      <tr>
+      <td>
+      <input type="checkbox" [(ngModel)]="masterSelected" name="list_name" value="m1" (change)="checkUncheckAll()" /> <strong>Check All</strong>
+    </td>
+     <!-- <td> <button (click)="disabledelected(checkLista)">Desabilitar</button>   </td>   -->
+
+  
+  </tr> 
+      <code>{{checkedList}}</code>      
     </table>
   </div>
 </main>
+
+
+
+
+
+         
+     
+
+
+    
+   
+  
+
